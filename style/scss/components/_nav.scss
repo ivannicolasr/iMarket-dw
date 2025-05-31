@@ -1,0 +1,33 @@
+/* Navigation */
+nav ul {
+    @include flex-center(row, center, center);
+}
+
+nav ul li {
+    margin-right: $main-margin;
+}
+
+nav a {
+    color: $text-color;
+    padding: 5px 10px;
+    border-radius: $border-radius;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten($border-color, 10%);
+    }
+
+    nav ul {
+        @include responsive($mobile-breakpoint) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    nav ul li {
+        @include responsive($mobile-breakpoint) {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+}

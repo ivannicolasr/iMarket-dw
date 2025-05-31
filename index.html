@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - iMarket</title>
+    <link rel="stylesheet" href="./style/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-container">
+            <a href="./index.html">
+                <img width="50" src="./img/applelogo.png" alt="Apple logo" />
+                <span>iMarket</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav role="navigation" aria-label="Menú principal" class="nav-menu">
+                <ul>
+                    <li><a href="./index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/accesorios.html">Accesorios</a></li>
+                    <li><a href="./pages/sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main role="main">
+        <!-- Sección de categorías destacadas -->
+        <section id="categorias-destacadas" aria-label="Categorías de productos">
+            <h2>Categorías Destacadas</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <figure>
+                        <img src="./img/iphone16.jpg" alt="iPhone" />
+                    </figure>
+                    <h3>iPhones</h3>
+                    <p>Explora la última generación de iPhones.</p>
+                    <a class="add-to-cart" href="./pages/productos.html#iphones">Ver más</a>
+                </article>
+
+                <article class="product-card">
+                    <figure>
+                        <img src="./img/ipadair.png" alt="iPad" />
+                    </figure>
+                    <h3>iPads</h3>
+                    <p>Potencia y portabilidad con los nuevos iPads.</p>
+                    <a class="add-to-cart" href="./pages/productos.html#ipads">Ver más</a>
+                </article>
+
+                <article class="product-card">
+                    <figure>
+                        <img src="./img/watchultra2.png" alt="Apple Watch" />
+                    </figure>
+                    <h3>Watches</h3>
+                    <p>Estilo y salud en tu muñeca.</p>
+                    <a class="add-to-cart" href="./pages/productos.html#watches">Ver más</a>
+                </article>
+
+                <article class="product-card">
+                    <figure>
+                        <img src="./img/airpodspro2.png" alt="AirPods" />
+                    </figure>
+                    <h3>AirPods</h3>
+                    <p>Calidad de sonido superior sin cables.</p>
+                    <a class="add-to-cart" href="./pages/productos.html#airpods">Ver más</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer role="contentinfo">
+        <p>&copy; 2025 iMarket. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script hamburguesa -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-menu');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

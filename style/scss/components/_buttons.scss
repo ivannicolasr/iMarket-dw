@@ -1,0 +1,10 @@
+/* Buttons */
+.button {
+    @include button-style($primary-color, $light-text-color, 15px 30px, 5px);
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.add-to-cart {
+    @include button-style($primary-color, $light-text-color, 10px 15px, 5px);
+}

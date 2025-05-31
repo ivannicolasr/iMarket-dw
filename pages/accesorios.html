@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios</title>
+    <link rel="stylesheet" href="../style/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Encabezado-->
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img width="50" src="../img/applelogo.png" alt="Logo de iMarket">
+                <span>iMarket</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="nav-menu" aria-label="Menú principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./accesorios.html" aria-current="page">Accesorios</a></li>
+                    <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--Contenido principal-->
+    <main>
+        <section id="accesorios-page">
+            <h1>Accesorios</h1>
+            <p>Encuentra los mejores accesorios para tus dispositivos Apple.</p>
+
+            <section id="cases" class="accessory-category">
+                <h2>Fundas y Protectores</h2>
+                <div class="product-grid">
+                    <article class="product-card" role="group" aria-label="Funda para iPhone 16">
+                        <img src="../img/funda-iphone16.png" alt="Funda protectora negra para iPhone 16">
+                        <h3>Funda para iPhone 16</h3>
+                        <p>Protege tu iPhone con estilo.</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </article>
+
+                    <article class="product-card" role="group" aria-label="Funda para iPhone 16 Pro">
+                        <img src="../img/funda-iphone16pro.png" alt="Funda protectora transparente para iPhone 16 Pro">
+                        <h3>Funda para iPhone 16 Pro</h3>
+                        <p>Protege tu iPhone con estilo.</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </article>
+                </div>
+            </section>
+
+            <section id="chargers" class="accessory-category">
+                <h2>Cargadores y Cables</h2>
+                <div class="product-grid">
+                    <article class="product-card" role="group" aria-label="Cargador 20W">
+                        <img src="../img/cargador-20w.png" alt="Cargador rápido de 20W para iPhone">
+                        <h3>Cargador 20W</h3>
+                        <p>Cargador rápido.</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </article>
+
+                    <article class="product-card" role="group" aria-label="Cargador MagSafe">
+                        <img src="../img/magsafe.png" alt="Cargador inalámbrico Apple MagSafe blanco">
+                        <h3>MagSafe</h3>
+                        <p>Cargador inalámbrico.</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </article>
+                </div>
+            </section>
+
+            <section id="headphones" class="accessory-category">
+                <h2>Auriculares</h2>
+                <div class="product-grid">
+                    <article class="product-card" role="group" aria-label="AirPods Pro 2">
+                        <img src="../img/airpodspro2.png" alt="Auriculares inalámbricos Apple AirPods Pro 2">
+                        <h3>AirPods Pro 2</h3>
+                        <p>Auriculares inalámbricos.</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </article>
+
+                    <article class="product-card" role="group" aria-label="AirPods Max">
+                        <img src="../img/airpodsmax.png" alt="Auriculares inalámbricos Apple AirPods Max">
+                        <h3>AirPods Max</h3>
+                        <p>Auriculares inalámbricos.</p>
+                        <button class="add-to-cart">Agregar al carrito</button>
+                    </article>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <!--Pie de página-->
+    <footer>
+        <p>&copy; 2025 iMarket. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.nav-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

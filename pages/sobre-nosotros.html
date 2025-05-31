@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="../style/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Encabezado-->
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img width="50" src="../img/applelogo.png" alt="Logo de iMarket">
+                <span>iMarket</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="nav-menu" aria-label="Menú principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./accesorios.html">Accesorios</a></li>
+                    <li><a href="./sobre-nosotros.html" aria-current="page">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--Contenido principal-->
+    <main>
+        <section id="sobre-nosotros-page" aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Sobre Nosotros</h1>
+            <p>Conocé nuestra historia, misión y visión.</p>
+
+            <section id="historia" aria-labelledby="titulo-historia">
+                <h2 id="titulo-historia">Nuestra Historia</h2>
+                <p>
+                    iMarket se fundó en 2020 con la misión de ofrecer los mejores productos Apple y un servicio al
+                    cliente
+                    excepcional. Desde nuestros humildes comienzos, hemos crecido hasta convertirnos en un distribuidor
+                    autorizado de confianza.
+                </p>
+            </section>
+
+            <section id="mision" aria-labelledby="titulo-mision">
+                <h2 id="titulo-mision">Nuestra Misión</h2>
+                <p>
+                    Brindar a nuestros clientes una experiencia de compra premium, con productos Apple auténticos,
+                    precios
+                    competitivos y excelente soporte.
+                </p>
+            </section>
+
+            <section id="vision" aria-labelledby="titulo-vision">
+                <h2 id="titulo-vision">Nuestra Visión</h2>
+                <p>
+                    Ser el destino preferido de los amantes de Apple, reconocido por nuestra calidad, confiabilidad e
+                    innovación.
+                </p>
+            </section>
+
+            <section id="equipo" aria-labelledby="titulo-equipo">
+                <h2 id="titulo-equipo">Nuestro Equipo</h2>
+                <p>
+                    Contamos con un equipo apasionado por la tecnología Apple, comprometido con brindar el mejor
+                    servicio a cada
+                    cliente.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <!--Pie de página-->
+    <footer>
+        <p>&copy; 2025 iMarket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.nav-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

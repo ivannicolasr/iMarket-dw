@@ -1,0 +1,32 @@
+/* Index Page */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: lighten($bg-color, 5%);
+    animation: fadeIn 1s ease-in-out;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        font-size: 1.2em;
+    }
+}
+
+.featured-section {
+    @include section-style();
+}

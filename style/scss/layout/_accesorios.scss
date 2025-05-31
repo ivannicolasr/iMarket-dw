@@ -1,0 +1,14 @@
+/* Accesorios Page */
+#accesorios-page {
+    @include section-style();
+}
+
+.accessory-category {
+    margin-bottom: $main-margin;
+
+    h2 {
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+    }
+}

@@ -1,0 +1,40 @@
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid-layout($columns, $gap: $main-margin) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+}
+
+@mixin button-style($bg-color, $text-color, $padding, $border-radius) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: $padding;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+@mixin section-style($bg-color: #fff, $padding: $main-padding, $margin-bottom: $main-margin, $border-radius: $border-radius, $box-shadow: $box-shadow) {
+    background-color: $bg-color;
+    padding: $padding;
+    margin-bottom: $margin-bottom;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}
+
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
