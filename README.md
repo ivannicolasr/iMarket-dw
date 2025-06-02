@@ -1,14 +1,15 @@
 # iMarket
 
-Sitio web simulado de una tienda Apple. Permite explorar productos, accesorios y agregar ítems al carrito.
+iMarket es un sitio web simulado de una tienda Apple. Permite a los usuarios explorar productos, ver accesorios disponibles y agregar ítems al carrito con almacenamiento local.
 
-## Tecnologías
+## Tecnologías utilizadas
 
-- HTML
-- CSS (SCSS)
-- JavaScript (localStorage)
+- HTML5
+- CSS
+- SCSS
+- JavaScript (manejo de localStorage)
 
-## Páginas
+## Secciones del sitio
 
 - Inicio
 - Productos
@@ -17,11 +18,16 @@ Sitio web simulado de una tienda Apple. Permite explorar productos, accesorios y
 - Sobre nosotros
 - Contacto
 
-## Funcionalidades
+## Funcionalidades destacadas
 
-- Navegación entre secciones
-- Carrito que guarda productos usando localStorage
-- Diseño responsive
+- Navegación entre múltiples secciones
+- Carrito de compras con persistencia mediante localStorage
+- Diseño adaptable (responsive) para distintos dispositivos
+
+## Sitio online
+
+El proyecto está disponible en:  
+👉 **http://i-market.infinityfreeapp.com**
 
 ## Autor
 
