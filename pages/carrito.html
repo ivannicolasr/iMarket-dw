@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../style/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../index.html">
+                <img width="50" src="../img/applelogo.png" alt="Logo de iMarket">
+                <span>iMarket</span>
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="nav-menu" aria-label="Menú principal">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./accesorios.html">Accesorios</a></li>
+                    <li><a href="./carrito.html" aria-current="page">Carrito</a></li>
+                    <li><a href="./sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-carrito">
+        <section class="accesorios">
+            <div class="intro-text">
+                <h1>Tu Carrito</h1>
+            </div>
+            <div class="product-grid" id="cart-container"></div>
+            <p id="total" class="total-price"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 iMarket. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const container = document.getElementById('cart-container');
+        const totalText = document.getElementById('total');
+
+        function renderCart() {
+            container.innerHTML = '';
+            let total = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1 / -1;">Tu carrito está vacío.</p>';
+                totalText.textContent = '';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                const div = document.createElement('div');
+                div.className = 'product-card';
+                div.innerHTML = `
+          <img src="${item.img}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <p>Cantidad: ${item.quantity}</p>
+          <p>Precio unitario: $${item.price}</p>
+          <p>Subtotal: $${item.price * item.quantity}</p>
+          <button class="add-to-cart" onclick="removeItem(${index})">Eliminar</button>
+        `;
+                container.appendChild(div);
+            });
+
+            totalText.textContent = `Total: $${total}`;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        renderCart();
+    </script>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav-menu');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
